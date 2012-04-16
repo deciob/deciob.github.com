@@ -69,7 +69,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 14, ../sass/screen.scss */
 .stretched, #stretch-offset {
-  border: 3px solid #292836;
+  border: 2px solid #292836;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
@@ -100,10 +100,4 @@ body {
 /* line 35, ../sass/screen.scss */
 ul {
   margin-top: 2em;
-}
-
-/* line 39, ../sass/screen.scss */
-.bottom {
-  position: absolute;
-  bottom: 1em;
 }
