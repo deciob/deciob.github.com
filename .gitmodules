@@ -1,0 +1,3 @@
+[submodule "wisk"]
+	path = wisk
+	url = git@github.com:deciob/wisk.git
