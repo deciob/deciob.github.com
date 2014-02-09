@@ -128,6 +128,10 @@ a:visited { color: #a0a; }
 /*****************************************************************************/
 
 /* standard */
+.post {
+  margin-bottom: 50px;
+}
+
 .post pre {
   border: 1px solid #ddd;
   background-color: #eef;
@@ -157,4 +161,8 @@ a:visited { color: #a0a; }
 
 .post pre.terminal code {
   background-color: #333;
+}
+
+ul > li {
+  margin-left: 10px;
 }

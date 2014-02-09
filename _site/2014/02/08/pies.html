@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Pie charts&#58; are they really that bad?</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">Data Story</a></h1>
+            <a class="extra" href="/">home</a>
+          </div>
+
+          <h2>Pie charts&#58; are they really that bad?</h2>
+<p class="meta">08 Feb 2014</p>
+
+<div class="post">
+<p>Let me start by saying that I dislike pie charts. A statement probably more tied to a feeling of uneasiness due to their huge success, rather than to any intrinsic weakness in them. But leaving personal feelings aside, pie charts are still a poor visual encoding for representing what we call &#8220;parts of a whole&#8221; datasets.</p>
+
+<p>The reason is simple: they rely on area and angles to encode information, visual properties that our brains have difficulty in handling with accuracy. The rule of thumb here is to prefer a barchart over a pie chart. Nevertheless, the use of pie charts can still lead to successful visualizations, as I recently learned.</p>
+
+<p>The story is short. A client asks for a visualization about a world-level regional breakdown of a number of suppliers for a big multinational company. He suggests the use of different sized pie charts overlapping a global map. I coded the visualization in <a href="http://d3js.org/">d3</a> and finalized it in <a href="http://www.inkscape.org/">Inkscape</a>. The final result is similar to the one below, however the data has been changed for confidentiality reasons.</p>
+
+<p><img style="width:630px; margin: 25px 0;" src="/assets/raw_materials_fake.png"></p>
+
+<p>A critical look to this image can easily highlight a number of practices that may not be ideal:</p>
+
+<ul>
+  <li>The use of pie charts.</li>
+  <li>The use of a high number of categories within these pie charts.</li>
+  <li>The use of area encoding on pies to add an extra data category.</li>
+  <li>Hiding large areas of the map.</li>
+  <li>Not using colour blind safe colours.</li>
+</ul>
+
+<p>Nevertheless, the visualization has been a success and was very appreciated by the client. Why? Because of the goal of the visualization.</p>
+
+<p>The emphasis here was in creating a visually pleasing product that illustrated an approximate idea, at a global level, of some data. The key is: &#8220;an approximate idea&#8221;. This visualization was not created for accurate analysis and that made all the difference. So, although pie charts are not as good as bar charts for visually encoding data, they can still be acceptable if the level of accuracy needed, when analyzing the visualization, is not particularly high.</p>
+
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'data-story'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Decio Battaglia,<br />
+                dreamer<br />
+              </p>
+            </div>
+            <div class="contact">
+              <p>
+                <a href="https://github.com/deciob">github.com/deciob</a><br />
+                <a href="https://twitter.com/deciobattaglia">twitter.com/deciobattaglia</a><br />
+              </p>
+            </div>
+          </div>
+        </div>
+
+    </body>
+</html>
