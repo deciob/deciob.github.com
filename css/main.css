@@ -104,6 +104,9 @@ h1 {
 a {
   color: #5c5c5c; }
 
+a:hover {
+  color: #000; }
+
 img.center {
   display: block;
   margin-left: auto;
@@ -174,12 +177,13 @@ h3 {
 p, li {
   font-size: 1em;
   line-height: 1.5em;
-  text-indent: 1em; }
+  text-indent: 0.6em; }
 
 p.no-indent {
   text-indent: 0; }
 
-img {
+img,
+.footer {
   margin-top: 1.5em;
   margin-bottom: 1.5em; }
 
@@ -187,10 +191,11 @@ img {
   margin-top: 1.5em; }
 
 .column, .list, .comments {
-  margin-top: 3em; }
+  padding-top: 3em;
+  padding-bottom: 3em; }
 
 .column.intro {
-  margin-top: 6em; }
+  margin-top: 3em; }
 
 .column.main,
 .column.last {
@@ -211,6 +216,9 @@ footer {
   -moz-column-gap: 20px;
   -webkit-column-count: 3;
   -webkit-column-gap: 20px; }
+
+.main {
+  border-top: 1px solid #e8e8e8; }
 
 /*
   ========================================
@@ -268,7 +276,6 @@ footer {
   font-size: 80%;
   color: #666;
   border-top: 4px solid #eee;
-  margin-top: 2em;
   overflow: hidden; }
 
 .footer .contact {
@@ -319,4 +326,3 @@ footer {
 
 ul > li {
   margin-left: 10px; }
-

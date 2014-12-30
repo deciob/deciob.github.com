@@ -27,7 +27,8 @@ title: Leonardo da Vinci&#39;s very accurate map of Imola
   </section>
 
   <footer>
-    <p>For details about the map application look into the <a href="https://github.com/deciob/imola">github repository</a></p>
+  	<p>The map application has been created with the help of: <a href="http://www.gimp.org/">Gimp</a>, <a href="http://www.qgis.org/">QGIS</a>, <a href="http://www.gdal.org/">GDAL</a>, <a href="http://leafletjs.com/">Leaflet</a>, <a href="https://www.mapbox.com/mapbox.js/api/v2.1.4/">Mapbox.js</a>, <a href="http://leaflet-extras.github.io/leaflet-providers/preview/">leaflet-extras</a></p>
+    <p><a href="https://github.com/deciob/imola">Source code</a></p>
   </footer>
 
 <script>
@@ -87,8 +88,12 @@ southWest = L.latLng(44.338, 11.669),
 northEast = L.latLng(44.369, 11.752),
 bounds = L.latLngBounds(southWest, northEast);
 
-map = L.mapbox.map('map', null, 
-  {maxBounds: bounds, maxZoom: 17, minZoom: 14}).setView([44.353, 11.713], 15);
+map = L.mapbox.map('map', null, {
+  maxBounds: bounds, 
+  maxZoom: 17, 
+  minZoom: 14,
+  scrollWheelZoom: false,
+}).setView([44.3526, 11.713], 15);
 
 baseMaps = {
   "Aerial ESRI": layerEsri,
