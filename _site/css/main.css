@@ -1,33 +1,224 @@
-/*****************************************************************************/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,700);
 /*
-/* Common
+  ============================================
+  #Global
+  ============================================
+*/
 /*
-/*****************************************************************************/
-
-/* Global Reset */
-* {
+  ============================================
+  #CSS RESET
+    http://meyerweb.com/eric/tools/css/reset/
+    v2.0 | 20110126
+    License: none (public domain)
+  ============================================
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
-}
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
 
-html, body { height: 100%; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
 
 body {
-  background-color: #FFF;
-  font: 13.34px Helvetica, Arial, sans-serif;
-  font-size: small;
-  text-align: center;
-}
+  line-height: 1; }
 
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%; }
+ol, ul {
+  list-style: none; }
 
-h1 { margin-bottom: 1em; }
-p { margin: 1em 0; }
+blockquote, q {
+  quotes: none; }
 
-a         { color: #00a; }
-a:hover   { color: #000; }
-a:visited { color: #a0a; }
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*
+  ========================================
+  #breakpoints
+  ========================================
+*/
+/*
+  ========================================
+  # Layout
+  ========================================
+*/
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.container {
+  max-width: 90%;
+  margin: 0 auto; }
+  @media (min-width: 900px) {
+    .container {
+      max-width: 75%; } }
+
+.details {
+  max-width: 70%;
+  margin: 0 auto; }
+  @media (min-width: 900px) {
+    .details {
+      max-width: 55%; } }
+
+/*
+  ========================================
+  #Generic
+  ========================================
+*/
+body {
+  background: #F5F5F3;
+  color: #222222; }
+
+ul {
+  list-style-type: square;
+  list-style-position: outside;
+  list-style-image: none; }
+
+h1 {
+  color: #696969; }
+
+a {
+  color: #5c5c5c; }
+
+.italic {
+  font-style: italic; }
+
+.upper {
+  text-transform: uppercase; }
+
+.first {
+  font-size: 24px;
+  font-weight: bold; }
+
+.center-text {
+  text-align: center; }
+
+.big-title {
+  color: #666; }
+
+.small-title {
+  color: #333; }
+
+@media (min-width: 900px) {
+  .column {
+    -moz-column-count: 3;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 20px; } }
+@media (min-width: 600px) and (max-width: 900px) {
+  .column {
+    -moz-column-count: 2;
+    -moz-column-gap: 25px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 25px; } }
+
+/*
+  ========================================
+  #Typography & vertical_rhythm
+
+    http://modularscale.com
+    ----------------------
+      13px @ 1:1.5
+      13px @ 1:1.5
+    ----------------------
+
+    http://compass-style.org/reference/compass/typography/vertical_rhythm/
+  ========================================
+*/
+/* Scale origin */
+html {
+  font-size: 100%;
+  line-height: 1.5em; }
+
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+h1 {
+  font-size: 3.375em;
+  line-height: 1.33333em;
+  margin: 0.66667em 0; }
+
+h3 {
+  font-size: 1.5em;
+  line-height: 2em; }
+
+p, li {
+  font-size: 1em;
+  line-height: 1.5em;
+  text-indent: 1em; }
+
+p.no-indent {
+  text-indent: 0; }
+
+img {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em; }
+
+#map {
+  margin-top: 1.5em; }
+
+.column, .list, .comments {
+  margin-top: 3em; }
+
+.column.intro {
+  margin-top: 6em; }
+
+.column.main,
+.column.last {
+  margin-bottom: 3em; }
+
+footer {
+  margin-bottom: 1.5em;
+  font-size: 0.66669em;
+  line-height: 2.24993em; }
+
+/*
+  ========================================
+  #Content
+  ========================================
+*/
+.three-col {
+  -moz-column-count: 3;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 20px; }
+
+/*
+  ========================================
+  #Map and Swiper
+  ========================================
+*/
+#map {
+  width: 100%;
+  height: 600px; }
+
+.range {
+  z-index: 9;
+  width: 100%; }
 
 /*****************************************************************************/
 /*
@@ -35,134 +226,93 @@ a:visited { color: #a0a; }
 /*
 /*****************************************************************************/
 .posts {
-  list-style-type: none;
-  margin-bottom: 2em;
-}
+  list-style-type: none; }
 
 .posts li {
-  line-height: 1.75em;
-}
-
-.posts span {
-  color: #aaa;
-  font-family: Monaco, "Courier New", monospace;
-  font-size: 80%;
-}
+  line-height: 1.75em; }
 
 /*****************************************************************************/
 /*
 /* Site
 /*
 /*****************************************************************************/
-
-.site {
-  font-size: 115%;
-  text-align: justify;
-  width: 42em;
-  margin: 3em auto 2em;
-  line-height: 1.5em;
-}
-
 .header a {
   font-weight: bold;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 .title {
-  display: inline-block;
-  margin-bottom: 2em;
-}
+  display: inline-block; }
 
 .title a {
-  color: #a00;
-}
+  color: #a00; }
 
 .title a:hover {
-  color: #000;
-}
+  color: #000; }
 
 .header a.extra {
   color: #aaa;
-  margin-left: 1em;
-}
+  margin-left: 1em; }
 
 .header a.extra:hover {
-  color: #000;
-}
+  color: #000; }
 
 .meta {
-  color: #aaa;
-}
+  color: #aaa; }
 
 .footer {
   font-size: 80%;
   color: #666;
   border-top: 4px solid #eee;
   margin-top: 2em;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 .footer .contact {
   float: left;
-  margin-right: 3em;
-}
+  margin-right: 3em; }
 
 .footer .contact a {
-  color: #8085C1;
-}
+  color: #8085C1; }
 
 .footer .rss {
   margin-top: 1.1em;
   margin-right: -.2em;
-  float: right;
-}
+  float: right; }
 
 .footer .rss img {
-  border: 0;
-}
+  border: 0; }
 
 /*****************************************************************************/
 /*
 /* Posts
 /*
 /*****************************************************************************/
-
 /* standard */
-.post {
-  margin-bottom: 50px;
-}
-
 .post pre {
   border: 1px solid #ddd;
   background-color: #eef;
-  padding: 0 .4em;
-}
+  padding: 0 .4em; }
 
 .post ul, .post ol {
-  margin-left: 1.35em;
-}
+  margin-left: 1.35em; }
 
 .post code {
   border: 1px solid #ddd;
   background-color: #eef;
-  padding: 0 .2em;
-}
+  padding: 0 .2em; }
 
 .post pre code {
-  border: none;
-}
+  border: none; }
 
 /* terminal */
 .post pre.terminal {
   border: 1px solid #000;
   background-color: #333;
-  color: #FFF;
-}
+  color: #FFF; }
 
 .post pre.terminal code {
-  background-color: #333;
-}
+  background-color: #333; }
 
 ul > li {
-  margin-left: 10px;
-}
+  margin-left: 10px; }
+
+/*# sourceMappingURL=main.css.map */

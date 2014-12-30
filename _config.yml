@@ -1,4 +1,4 @@
 name: Data Story
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 timezone: Europe/London
