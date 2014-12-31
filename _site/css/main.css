@@ -227,7 +227,10 @@ footer {
 */
 #map {
   width: 100%;
-  height: 600px; }
+  height: 500px; }
+  @media (min-height: 900px) {
+    #map {
+      height: 620px; } }
 
 .range {
   z-index: 9;
@@ -326,3 +329,4 @@ footer {
 
 ul > li {
   margin-left: 10px; }
+
