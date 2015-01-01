@@ -102,10 +102,11 @@ h1 {
   color: #696969; }
 
 a {
-  color: #5c5c5c; }
+  color: #ce6607;
+  text-decoration: none; }
 
 a:hover {
-  color: #000; }
+  color: #a35208; }
 
 img.center {
   display: block;
@@ -131,13 +132,13 @@ img.center {
 .small-title {
   color: #333; }
 
-@media (min-width: 900px) {
+@media (min-width: 1050px) {
   .column {
     -moz-column-count: 3;
     -moz-column-gap: 20px;
     -webkit-column-count: 3;
     -webkit-column-gap: 20px; } }
-@media (min-width: 600px) and (max-width: 900px) {
+@media (min-width: 600px) and (max-width: 1050px) {
   .column {
     -moz-column-count: 2;
     -moz-column-gap: 25px;
@@ -217,8 +218,12 @@ footer {
   -webkit-column-count: 3;
   -webkit-column-gap: 20px; }
 
-.main {
+.column {
   border-top: 1px solid #e8e8e8; }
+
+.intro,
+.no-border {
+  border-top: 0; }
 
 /*
   ========================================
@@ -227,10 +232,13 @@ footer {
 */
 #map {
   width: 100%;
-  height: 500px; }
+  height: 400px; }
+  @media (min-height: 700px) {
+    #map {
+      height: 500px; } }
   @media (min-height: 900px) {
     #map {
-      height: 620px; } }
+      height: 600px; } }
 
 .range {
   z-index: 9;
